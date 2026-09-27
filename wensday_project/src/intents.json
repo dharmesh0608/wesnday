@@ -1,0 +1,87 @@
+{
+  "intents": [
+    {
+      "name": "set_alarm",
+      "utterances": [
+        "set an alarm for 7 am",
+        "wake me up at 7",
+        "alarm at 7 tomorrow",
+        "set alarm for 07:00"
+      ]
+    },
+    {
+      "name": "list_alarms",
+      "utterances": [
+        "what alarms do i have",
+        "list my alarms",
+        "show alarms"
+      ]
+    },
+    {
+      "name": "cancel_alarm",
+      "utterances": [
+        "cancel alarm",
+        "delete alarm",
+        "remove alarm"
+      ]
+    },
+    {
+      "name": "send_message",
+      "utterances": [
+        "send message to mom",
+        "text john hello",
+        "send sms to 98765",
+        "send message to +919876543210: hello"
+      ]
+    },
+    {
+      "name": "open_app",
+      "utterances": [
+        "open spotify",
+        "launch calculator",
+        "open chrome",
+        "open browser"
+      ]
+    },
+    {
+      "name": "make_call",
+      "utterances": [
+        "call john",
+        "make a call to mom",
+        "dial +919876543210"
+      ]
+    },
+    {
+      "name": "take_note",
+      "utterances": [
+        "take a note",
+        "remember that",
+        "note down"
+      ]
+    },
+    {
+      "name": "show_notes",
+      "utterances": [
+        "show my notes",
+        "list notes",
+        "read notes"
+      ]
+    },
+    {
+      "name": "show_calendar",
+      "utterances": [
+        "show my calendar",
+        "today's events",
+        "calendar events"
+      ]
+    },
+    {
+      "name": "general_query",
+      "utterances": [
+        "what is the weather",
+        "who is albert einstein",
+        "tell me a joke"
+      ]
+    }
+  ]
+}
