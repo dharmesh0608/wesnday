@@ -1,0 +1,20 @@
+sequenceDiagram
+  User->>UI: Enter or speak a command
+  UI->>Assistant: Command text
+  Assistant->>IntentDB: Match intent and extract entities
+  alt Local action
+    Assistant->>Actions: Dispatch action
+    Actions->>Persistence: Read or write notes and alarms
+    Actions->>Scheduler: Schedule or cancel alarm
+    Actions-->>Assistant: Result
+  else General question with API key
+    Assistant->>OpenAI: Responses API request
+    OpenAI-->>Assistant: Answer
+  end
+  Assistant->>SpeechOut: Speak response when TTS is available
+  Assistant-->>UI: Show response and structured results
+
+  opt Calendar command
+    Actions->>GoogleCalendar: OAuth-authorized read request
+    GoogleCalendar-->>Actions: Upcoming events
+  end

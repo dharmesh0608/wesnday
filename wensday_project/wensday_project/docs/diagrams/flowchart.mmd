@@ -1,0 +1,27 @@
+flowchart LR
+  UI[PyQt GUI]
+  SpeechIn[Speech Input]
+  SpeechOut[Speech Output]
+  Assistant[Assistant Core]
+  IntentDB[Intents]
+  Actions[Action Handlers]
+  Scheduler[Alarm Scheduler]
+  Persistence[(SQLite / JSON)]
+  OpenAI[Optional OpenAI API]
+  Calendar[Google Calendar OAuth]
+  WakeWord[Optional Porcupine Wake Word]
+  Android[Kivy Android Client]
+
+  UI -->|text| Assistant
+  SpeechIn -->|transcribed text| Assistant
+  Assistant --> IntentDB
+  Assistant -->|dispatch| Actions
+  Assistant -->|unmatched question| OpenAI
+  Actions --> Scheduler
+  Actions --> Persistence
+  Actions -->|optional events| Calendar
+  Assistant --> SpeechOut
+  UI --> SpeechOut
+  WakeWord -->|activation| UI
+  Android -->|notes and alarms| MobileData[(Private JSON storage)]
+  Android -->|native intents| Phone[Dialer / SMS / Browser]
