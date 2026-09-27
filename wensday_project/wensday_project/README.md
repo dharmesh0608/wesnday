@@ -32,7 +32,7 @@ Speech recognition needs a microphone and working PyAudio installation. The app 
 
 The Android client is separate from the PyQt5 desktop app and does not have desktop feature parity. It stores notes and alarms locally; alarm alerts require Wensday to remain open. Calls and SMS open native review screens and are never sent automatically.
 
-To build an APK, push this project to a GitHub repository with Actions enabled, then open **Actions**, select **Build Wensday Android APK**, and choose **Run workflow**. Download the `wensday-debug-apk` artifact after the job completes. The workflow builds a debug APK, not a signed Play Store release.
+To build an APK, push this project to a GitHub repository with Actions enabled, then open **Actions**, select **Build Android APK**, and choose **Run workflow**. Download the `wensday-debug-apk` artifact after the job completes. The workflow builds a debug APK, not a signed Play Store release.
 
 Local Buildozer builds are best run from Linux or WSL. The project includes `buildozer.spec` and `requirements-android.txt` for that target.
 
